@@ -56,3 +56,5 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ---
 
 *Built as a Python learning project* 🐍
+
+(Current Objectives: Enhance user experience by usinh time module through adding time.sleep later)
