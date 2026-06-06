@@ -4,7 +4,7 @@ import time
 import string
 
 # Set the variables
-spl = "!@#$%^&*()?/-"
+spl = "!@#$%&/-"
 strength = string.ascii_letters + string.digits + spl
 
 #Try out a function
@@ -14,9 +14,17 @@ def password():
     # Make a loop for error handling
     while True:
         try:
+            time.sleep(0.5)
             letters = int(input("How many characters do you want in your password? "))
-            break
-        except: print("This is not a number.. Please input a valid integer!")
+            time.sleep(0.5)
+            if letters <= 0:
+                print(f"""A password can't be {letters} characters long T-T
+Please try again..""")
+            else: break
+        except:
+            time.sleep(0.5)
+            print("This is not a number.. Please input a valid integer!")
+            
     for i in range(letters):
         chr.append(secrets.choice(strength))
     return ''.join(chr)
@@ -27,12 +35,16 @@ print(passw)
 while True:
     try_again = input("Try again?")
     if try_again == "y":
+        time.sleep(0.5)
         passw = password()
         print(passw)
     elif try_again == "n":
-        print("Thanks for using this")
+        time.sleep(0.5)
+        print("Thanks for using this script :)")
+        print()
         break
     else:
+        time.sleep(0.5)
         print('Please input either "y" or "n"')
 
 # Comments:
