@@ -23,8 +23,7 @@ Please try again..""")
             else: break
         except:
             time.sleep(0.5)
-            print("This is not a number.. Please input a valid integer!")
-            
+            print("This is not a number.. Please input a valid integer!")  
     for i in range(letters):
         chr.append(secrets.choice(strength))
     return ''.join(chr)
