@@ -55,3 +55,38 @@ while True:
 # - break logic messing up the 'while True:' chains
 # - infinite loop of 'please input either x or y'
 # - over complication by making several loops
+
+
+# v2 - Made for practice
+# # Gets the necessary modules
+# import secrets
+# import string
+# import time
+
+# #Try out a function
+# def password(length):
+#     """Gets a secure password of `length` characters"""
+#     if length < 2:
+#         raise ValueError("Need atleast 2 characters")
+#     spl = "!@#$%&/-"
+#     strength = string.ascii_letters + string.digits + spl
+#     chr = []  
+#     for i in range(length):
+#         chr.append(secrets.choice(strength))
+#     return ''.join(chr)
+
+# while True:
+#     try:
+#         length = int(input("How many characters do you want in password?"))
+#         print(password(length))
+#     except Exception as e:
+#         print(f"Sorry please try again - {e}")
+#     except KeyboardInterrupt:
+#         time.sleep(0.5)
+#         print("\nExiting on user request..")
+#         break
+#     else:
+#         try_again = input("Try again [y/N]?").lower()
+#         if try_again != "y":
+#             break
+#     time.sleep(0.5)
